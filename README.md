@@ -1,12 +1,34 @@
 # Basic_calculator
-# Description
-This is a simple calculator program written in C++. It supports basic arithmetic operations including addition (+), subtraction (-), multiplication (*), division (/), and modulus (%). The program takes two operands and an operator as input and outputs the result of the operation.
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cout<<"enter the value of a :";
+    cin>>a;
+    cout<<"enter the value of b :";
+    cin>>b;
+    char o;
+    cout<< "enter the operator to perform operation :";
+    cin>>o;
 
-Features
-Addition (+)
-Subtraction (-)
-Multiplication (*)
-Division (/)
-Modulus (%)
-Requirements
-C++ compiler (GCC, Clang, MSVC, etc.)
+    switch(o){
+        case '+': cout<<'Addition';
+        cout<< a+b; 
+        break;
+
+        case '-': cout<<'Subtraction:';
+        cout<< a-b; 
+        break;
+
+        case '/': cout<<'Division :';
+        cout<< a/b;break;
+        
+        case '*': cout<<'Multiplication :';
+        cout<< a*b;break;
+
+        case '%': cout<<'Modulus';
+        cout<< a%b; break;
+
+        default : cout<< 'Invalid operator'; 
+    }return 0;
+}
